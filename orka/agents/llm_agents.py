@@ -6,7 +6,7 @@ from .agent_base import BaseAgent
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+OPENAI_MODEL = os.getenv("BASE_OPENAI_MODEL", "gpt-3.5-turbo")
 
 if not OPENAI_API_KEY:
     raise EnvironmentError("OPENAI_API_KEY environment variable is required")
