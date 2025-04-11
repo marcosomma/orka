@@ -19,7 +19,7 @@ OrKa is a modular AI orchestration system that turns LLMs into composable agents
 git clone https://github.com/YOU/OrKa.git
 cd OrKa
 pip install -e .
-python -m orka.orka_cli ./example.yaml "Your input question" --log-to-file
+python -m orka.orka_cli ./example.yml "Your input question" --log-to-file
 ```
 
 ## License & Attribution
