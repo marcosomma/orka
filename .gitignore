@@ -30,3 +30,6 @@ build/
 
 # OS/system
 Thumbs.db
+
+# Backup
+*.rdb
