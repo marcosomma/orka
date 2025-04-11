@@ -24,11 +24,5 @@ python -m orka.orka_cli ./example.yml "Your input question" --log-to-file
 
 ## License & Attribution
 
-This project is licensed under Apache 2.0 with additional requirements for attribution.
-
-If you fork or reuse this code, you **must** clearly:
-- Mention the original project name **OrKa**.
-- Credit the author **Marco Somma (@marcosomma)**.
-- Link back to this repository.
-
+This project is licensed under CC BY-NC 4.0 with additional requirements for attribution.
 See the `LICENSE` file for details.
