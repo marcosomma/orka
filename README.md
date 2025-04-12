@@ -1,10 +1,15 @@
+# OrKa 
 
 <div align="center">
-  <img src="./logo_256.png" alt="OrKa Logo" width="256" height="256"/>
+
+  <img src="./assets/logo_256.png" alt="OrKa Logo" width="256" height="256"/>
+
+![Tests](https://github.com/marcosomma/orka/actions/workflows/tests.yml/badge.svg)
+[![codecov](https://codecov.io/gh/marcosomma/orka/graph/badge.svg?token=50DUUWVJA9)](https://codecov.io/gh/marcosomma/orka)
 </div>
 
-# OrKa (Patent Pending)
-**Orchestrator Kit for Agentic Reasoning** - OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
+
+***(Patent Pending)*** **Orchestrator Kit for Agentic Reasoning** - OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
 
 ## 🚀 Features
 
@@ -19,6 +24,15 @@
 - Ensure you have Python and Redis installed on your system.
 - Ensure redis is up and running
 
+### PIP
+
+1. **Clone the Repository**:
+  ```
+    pip install orka-reasoning
+  ```
+
+### OR
+
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/marcosomma/orka.git
@@ -30,7 +44,7 @@
    pip install -e .
    ```
 
-3. **Create a `.env` file** in the root directory with your API credentials and settings:
+***!IMPORTANT¡*** **Create a `.env` file** in the root directory with your API credentials and settings:
    ```
    OPENAI_API_KEY=your_openai_api_key
    BASE_OPENAI_MODEL=gpt-4o-mini
@@ -54,7 +68,8 @@ This command processes the input question through the defined workflow and logs 
 
 The YAML file specifies the agents and their interactions. Below is an example configuration:
 
-```yamlorchestrator:
+```yaml
+orchestrator:
   id: fact-checker
   strategy: sequential
   queue: orka:fact-core
@@ -107,10 +122,14 @@ python -m orka.orka_cli ./example.yml "What is the capital of France?" --log-to-
 
 This will execute the workflow defined in `example.yml` with the input question, logging each reasoning step.
 
+## 📚 Documentation
+
+📘 [View the Documentation](./docs/index.md)
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## 📜 License & Attribution
 
-This project is licensed under the CC BY-NC 4.0 License. For more details, refer to the [LICENSE.md](./LICENSE.md) file.
+This project is licensed under the CC BY-NC 4.0 License. For more details, refer to the [LICENSE](./LICENSE) file.

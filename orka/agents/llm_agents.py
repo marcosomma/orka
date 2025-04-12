@@ -26,7 +26,11 @@ class OpenAIAnswerBuilder(BaseAgent):
 
 class OpenAIBinaryAgent(BaseAgent):
     def run(self, input_data):
-        full_prompt = f"{self.prompt}\n\n{input_data}. ###Constrains: Answer strictly TRUE or FALSE."
+        full_prompt = f"""
+            {self.prompt}\n\n{input_data}. 
+            ###Constrains: 
+            - Answer strictly TRUE or FALSE.
+        """
         response = client.chat.completions.create(
             model=OPENAI_MODEL,
             messages=[{"role": "user", "content": full_prompt}],
@@ -38,7 +42,12 @@ class OpenAIBinaryAgent(BaseAgent):
 class OpenAIClassificationAgent(BaseAgent):
     def run(self, input_data):
         options = self.params.get("options", [])
-        full_prompt = f"{self.prompt}\n\n{input_data}"
+        full_prompt = f"""{self.prompt}\n\n{input_data} 
+            ###Constrains: 
+            - Answer ONLY with one word.
+            - Answer ONLY with one of the options.
+            - Only pick from those options [{options}].
+        """
         response = client.chat.completions.create(
             model=OPENAI_MODEL,
             messages=[{"role": "user", "content": full_prompt}],

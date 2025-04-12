@@ -6,3 +6,8 @@ google-api-python-client
 duckduckgo-search
 dotenv
 openai
+pytest
+coverage
+python-dotenv
+pyyaml
+pytest-cov

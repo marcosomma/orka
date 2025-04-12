@@ -4,23 +4,22 @@ orchestrator:
   strategy: sequential
   queue: orka:fact-core
   agents:
-    - domain_classifier
-    - is_fact
-    - requires_search
-    - router_search
-    - duck_search  
-    - need_answer
-    - router_answer
-    - validate_fact
-    - build_answer
+    - domain_classifier # < -- 1st agent Classifies the domain "science, geography, history, technology, date check, general"
+    - is_fact # < -- 2nd agent Classifies if the input is a fact or not 
+    - requires_search # < -- 3rd agent Classifies if the input requires external search or not
+    - router_search # < -- 4th agent Routes to either duck_search or validate_fact based on requires_search
+    - duck_search #     < -- IF YES > agent Performs web search using DuckDuckGo
+    - need_answer #     < -- IF NO > agent Classifies if the input is a question that requires an answer
+    - router_answer #   < -- 5th agent Routes to either build_answer or validate_fact based on need_answer
+    - build_answer #      < -- IF YES > agent Builds an answer (using the search results from duck_search if availables)
+    - validate_fact #     < -- IF NO > agent Validates the fact (using the search results from duck_search if availables)
 
 agents:
   - id: domain_classifier
     type: openai-classification
     prompt: >
-      Classify this question into one of the following domains:
-      - science, geography, history, technology, date check, general
-    options: [science, geography, history, technology, date check, general]
+      Classify this question {{ input }} one of the following domains
+    options: [science, geography, history, technology, date check, general, pople, culture, politics, sports]
     queue: orka:domain
 
   - id: is_fact
