@@ -1,6 +1,6 @@
 
 ![Tests](https://github.com/marcosomma/orka/actions/workflows/tests.yml/badge.svg)
-[![codecov](https://codecov.io/gh/marcosomma/orka/branch/main/graph/badge.svg)](https://codecov.io/gh/marcosomma/orka)
+[![codecov](https://codecov.io/gh/marcosomma/orka/graph/badge.svg?token=50DUUWVJA9)](https://codecov.io/gh/marcosomma/orka)
 
 <div align="center">
   <img src="./logo_256.png" alt="OrKa Logo" width="256" height="256"/>
