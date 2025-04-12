@@ -31,14 +31,19 @@ Click the thumbnail above to watch a quick video demo of OrKa in action — how 
 - Ensure you have Python and Redis installed on your system.
 - Ensure redis is up and running
 
-### PIP
+***pip under maintainence***
 
-1. **Clone the Repository**:
-  ```
-    pip install orka-reasoning
-  ```
+<del>
 
-### OR
+  ### PIP
+
+  1. **Clone the Repository**:
+    ```
+      pip install orka-reasoning
+    ```
+
+  ### OR 
+</del>
 
 1. **Clone the Repository**:
    ```bash
