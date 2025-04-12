@@ -1,6 +1,6 @@
 [📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
 
-# OrKa Architecture
+# OrKa Architecture ***(Patent Pending)***
 
 OrKa (Orchestrator Kit for Agentic Reasoning) is built on a simple but powerful architecture: modular AI agents orchestrated through a declarative YAML interface, with messaging and traceability powered by Redis (and soon Kafka).
 

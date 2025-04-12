@@ -1,6 +1,6 @@
 [📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
 
-# Agent Types in OrKa
+# Agent Types in OrKa ***(Patent Pending)***
 
 In OrKa, **agents** are modular processing units that receive input and return structured output — all orchestrated via a declarative YAML configuration.
 

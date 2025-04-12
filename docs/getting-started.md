@@ -1,6 +1,6 @@
 [📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
 
-# Getting Started with OrKa
+# Getting Started with OrKa ***(Patent Pending)***
 
 Welcome to **OrKa** — the Orchestrator Kit for Agentic Reasoning. This guide will help you set up the project, understand its basic components, and run your first orchestration pipeline.
 
