@@ -38,7 +38,7 @@ class OpenAIBinaryAgent(BaseAgent):
 class OpenAIClassificationAgent(BaseAgent):
     def run(self, input_data):
         options = self.params.get("options", [])
-        full_prompt = f"{self.prompt}\n\n{input_data}"
+        full_prompt = f"{self.prompt}\n\n{input_data} ###Constrains: Only pick from those options [{options}]."
         response = client.chat.completions.create(
             model=OPENAI_MODEL,
             messages=[{"role": "user", "content": full_prompt}],

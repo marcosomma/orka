@@ -26,9 +26,9 @@
 ### PIP
 
 1. **Clone the Repository**:
-```
-pip install orka-reasoning
-```
+  ```
+    pip install orka-reasoning
+  ```
 
 ### OR
 
