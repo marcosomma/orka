@@ -1,4 +1,4 @@
-# OrKa 
+# OrKa ***(Patent Pending)*** 
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 </div>
 
 
-***(Patent Pending)*** **Orchestrator Kit for Agentic Reasoning** - OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
+**Orchestrator Kit for Agentic Reasoning** - OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
 
 ## 🚀 Features
 
