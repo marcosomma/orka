@@ -1,31 +1,10 @@
 
-<div align="left" style="position: relative; background-color: #BBE5FAFF; border-radius: 20px; overflow: hidden; padding: 0px; margin:0; max-width:780px; min-width:780px;">
-  <!-- Title + Subtitle -->
-  <div style="position: absolute; z-index: 10; padding-left: 300px; padding-top: 30px;">
-    <h1 style="margin: 0; font-size: 3em; font-family: monospace; color: #2675A7FF;">#OrKa</h1>
-    <p style="margin: 0; font-size: 1em; font-family: sans-serif; color: #74C1F1FF;">
-      Orchestrator Kit for Agentic Reasoning
-    </p>
-  </div>
-  <!-- Logo on top -->
-  <img src="./logo_256.png" alt="OrKa Logo" width="200" height="200" style="position: relative; z-index: 10;padding-left: 60px;" />
-  <!-- Layered background waves (behind) -->
-  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="display: block; transform: rotate(180deg); margin-top:-80px; z-index:1">
-    <path fill="#FFFFFFFF" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
-  </svg>
-  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="display: block; transform: rotate(-180deg); margin-top:-50px; z-index:1">
-    <path fill="#50A7BDFF" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
-  </svg>
-  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="display: block; transform: rotate(-180deg); margin-top:-50px; z-index:1">
-    <path fill="#476972FF" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
-  </svg>
-  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="display: block; transform: rotate(-180deg); margin-top:-50px; z-index:1">
-    <path fill="#37B5D8FF" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
-  </svg>
-
-</div>
+<p align="center">
+  <img src="./logo_256.png" alt="OrKa Logo" width="256" height="256"/>
+</p>
 
 # OrKa — Orchestrator Kit for Agentic Reasoning
+
 
 OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
 
