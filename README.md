@@ -58,7 +58,8 @@ This command processes the input question through the defined workflow and logs 
 
 The YAML file specifies the agents and their interactions. Below is an example configuration:
 
-```yamlorchestrator:
+```yaml
+orchestrator:
   id: fact-checker
   strategy: sequential
   queue: orka:fact-core
