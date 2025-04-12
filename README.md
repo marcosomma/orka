@@ -22,7 +22,7 @@
 
 ## 🎥 OrKa Video Overview
 
-[![Watch the video](https://img.youtube.com/vi/dG0XQUS8Dh4/hqdefault.jpg)](https://www.youtube.com/watch?v=dG0XQUS8Dh4)
+[![Watch the video](https://img.youtube.com/vi/hvVc8lSoADI/hqdefault.jpg)](https://www.youtube.com/watch?v=hvVc8lSoADI)
 
 Click the thumbnail above to watch a quick video demo of OrKa in action — how it uses YAML to orchestrate agents, log reasoning, and build transparent LLM workflows.
 
