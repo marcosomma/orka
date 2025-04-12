@@ -18,9 +18,8 @@ agents:
   - id: domain_classifier
     type: openai-classification
     prompt: >
-      Classify this question into one of the following domains:
-      - science, geography, history, technology, date check, general
-    options: [science, geography, history, technology, date check, general]
+      Classify this question {{ input }} one of the following domains
+    options: [science, geography, history, technology, date check, general, pople, culture, politics, sports]
     queue: orka:domain
 
   - id: is_fact
