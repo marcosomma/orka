@@ -104,8 +104,7 @@ class Orchestrator:
                 normalized_key = "true" if normalized else "false"
                 payload['previous_outputs'][decision_key] = normalized_key
                 result = agent.run(payload)
-                print(
-                    f"[ROUTER] Using decision_key='{decision_key}' → '{normalized_key}' → route={result}")
+                print(f"[ROUTER] Using decision_key='{decision_key}' → '{normalized_key}' → route={result}")
             elif hasattr(agent, "prompt") and isinstance(agent.prompt, str):
                 rendered_prompt = self.render_prompt(agent.prompt, payload)
                 payload["prompt"] = rendered_prompt

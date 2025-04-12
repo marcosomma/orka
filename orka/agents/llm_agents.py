@@ -53,7 +53,5 @@ class OpenAIClassificationAgent(BaseAgent):
             messages=[{"role": "user", "content": full_prompt}],
             temperature=0
         )
-        print(f"Response: {response}, full_prompt: {full_prompt}")
         answer = response.choices[0].message.content.strip().lower()
-        print(f"Answer: {answer}, Options: {options}")
         return answer if answer in options else "unknown"
