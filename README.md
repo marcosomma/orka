@@ -23,6 +23,15 @@
 - Ensure you have Python and Redis installed on your system.
 - Ensure redis is up and running
 
+### PIP
+
+1. **Clone the Repository**:
+```
+pip install orka-reasoning
+```
+
+### OR
+
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/marcosomma/orka.git
@@ -34,7 +43,7 @@
    pip install -e .
    ```
 
-3. **Create a `.env` file** in the root directory with your API credentials and settings:
+***!IMPORTANT¡*** **Create a `.env` file** in the root directory with your API credentials and settings:
    ```
    OPENAI_API_KEY=your_openai_api_key
    BASE_OPENAI_MODEL=gpt-4o-mini
@@ -122,4 +131,4 @@ We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) fo
 
 ## 📜 License & Attribution
 
-This project is licensed under the CC BY-NC 4.0 License. For more details, refer to the [LICENSE.md](./LICENSE.md) file.
+This project is licensed under the CC BY-NC 4.0 License. For more details, refer to the [LICENSE](./LICENSE) file.
