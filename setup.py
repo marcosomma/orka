@@ -21,7 +21,20 @@ setup(
     install_requires=[
         "redis",
         "litellm",
-        "pyyaml"
+        "pyyaml",
+        "async-timeout"
+        "PyYAML==",
+        "redis==",
+        "jinja2",
+        "google-api-python-client",
+        "duckduckgo-search",
+        "dotenv",
+        "openai",
+        "pytest",
+        "coverage",
+        "python-dotenv",
+        "pyyaml",
+        "pytest-cov",
     ],
     author="Marco Somma",
     description="OrKa: Modular orchestration for agent-based cognition",
