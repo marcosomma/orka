@@ -7,7 +7,7 @@
 # You may not use this file for commercial purposes without explicit permission.
 #
 # Full license: https://creativecommons.org/licenses/by-nc/4.0/legalcode
-# For commercial use, contact: marcosomma.work@gm
+# For commercial use, contact: marcosomma.work@gmail.com
 # 
 # Required attribution: OrKa by Marco Somma – https://github.com/marcosomma/orka
 
