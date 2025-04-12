@@ -10,3 +10,4 @@ pytest
 coverage
 python-dotenv
 pyyaml
+pytest-cov
