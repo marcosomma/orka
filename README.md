@@ -114,7 +114,7 @@ This will execute the workflow defined in `example.yml` with the input question,
 
 ## 📚 Documentation
 
-📘 [View the Documentation](https://marcosomma.github.io/orka/)
+📘 [View the Documentation](./docs/index.md)
 
 ## 🤝 Contributing
 

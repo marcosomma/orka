@@ -58,7 +58,7 @@ Unlike LangChain, CrewAI, or Flowise, OrKa is not just a wrapper for LLM APIs. I
 Check out [Getting Started](getting-started.md) for setup, installation, and your first YAML orchestration.
 
 Want to see how it all works?  
-Jump into [`orka.yaml`](../orka.yaml) and try running:
+Jump into [`example.yaml`](../example.yaml) and try running:
 
 ```bash
 python test_run.py
