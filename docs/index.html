@@ -2,32 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OrKa — Orchestrator Kit for Agentic Reasoning</title>
   <style>
+    /* 70s surf-style background */
     body {
-      font-family: sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       padding: 2rem;
-      background: #0d1117;
-      color: #c9d1d9;
+      color: #fff;
+      background: repeating-radial-gradient(
+          circle at 0 100%,
+          #0077b6 0,
+          #0077b6 20px,
+          #00b4d8 20px,
+          #00b4d8 40px,
+          #90e0ef 40px,
+          #90e0ef 60px,
+          #caf0f8 60px,
+          #caf0f8 80px
+        ),
+        linear-gradient(to bottom, #03045e, #023e8a);
+      background-size: 100% 100%;
+      min-height: 100vh;
+      background-blend-mode: overlay;
     }
-    h1 { font-size: 2.5rem; }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px #000;
+    }
+
     a {
-      color: #58a6ff;
+      color: #ffdd57;
       text-decoration: none;
     }
+
     .button {
-      background: #238636;
+      background: #ff6f00;
       color: white;
       padding: 0.75rem 1.5rem;
       display: inline-block;
       margin-top: 1.5rem;
       border-radius: 6px;
       text-decoration: none;
+      box-shadow: 2px 2px 0 #000;
+      font-weight: bold;
     }
+
+    .button:hover {
+      background: #ffa000;
+    }
+
     .logo {
       max-width: 128px;
       margin-bottom: 1rem;
+      filter: drop-shadow(2px 2px 0 #000);
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-shadow: 1px 1px #000;
     }
   </style>
 </head>
