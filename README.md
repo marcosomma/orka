@@ -1,7 +1,9 @@
 
-# OrKa — Orchestrator Kit for Agentic Reasoning
+<p align="center">
+  <img src="./logo_256.png" alt="OrKa Logo" width="256" height="256"/>
+</p>
 
-![OrKa Logo](./logo.png)
+# OrKa — Orchestrator Kit for Agentic Reasoning
 
 OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
 
@@ -15,7 +17,8 @@ OrKa is a modular AI orchestration system that transforms Large Language Models 
 
 ## 🛠️ Installation
 
-Ensure you have Python and Redis installed on your system.
+- Ensure you have Python and Redis installed on your system.
+- Ensure redis is up and running
 
 1. **Clone the Repository**:
    ```bash
@@ -52,20 +55,35 @@ This command processes the input question through the defined workflow and logs 
 
 The YAML file specifies the agents and their interactions. Below is an example configuration:
 
-```yaml
-agents:
-  - name: "web_search"
-    type: "search"
-  - name: "openai_agent"
-    type: "llm"
+```yamlorchestrator:
+  id: fact-checker
+  strategy: sequential
+  queue: orka:fact-core
+  agents:
+    - domain_classifier
+    - is_fact
+    - validate_fact
 
-workflow:
-  - from: "input"
-    to: "web_search"
-  - from: "web_search"
-    to: "openai_agent"
-  - from: "openai_agent"
-    to: "output"
+agents:
+  - id: domain_classifier
+    type: openai-classification
+    prompt: >
+      Classify this question into one of the following domains:
+      - science, geography, history, technology, date check, general
+    options: [science, geography, history, technology, date check, general]
+    queue: orka:domain
+
+  - id: is_fact
+    type: openai-binary
+    prompt: >
+      Is this a {{ input }} factual assertion that can be verified externally? Answer TRUE or FALSE.
+    queue: orka:is_fact
+
+  - id: validate_fact
+    type: openai-binary
+    prompt: |
+      Given the fact "{{ input }}", and the search results "{{ previous_outputs.duck_search }}"?
+    queue: validation_queue
 ```
 
 ### Key Sections
