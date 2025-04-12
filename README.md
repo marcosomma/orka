@@ -6,8 +6,9 @@
 
 ![Tests](https://github.com/marcosomma/orka/actions/workflows/tests.yml/badge.svg)
 [![codecov](https://codecov.io/gh/marcosomma/orka/graph/badge.svg?token=50DUUWVJA9)](https://codecov.io/gh/marcosomma/orka)
-</div>
 
+[WEB](https://marcosomma.github.io/orka/)
+</div>
 
 **Orchestrator Kit for Agentic Reasoning** - OrKa is a modular AI orchestration system that transforms Large Language Models (LLMs) into composable agents capable of reasoning, fact-checking, and constructing answers with transparent traceability.
 
