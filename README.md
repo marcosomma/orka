@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./logo_256.png" alt="OrKa Logo" width="256" height="256"/>
+  <img src="./assets/logo_256.png" alt="OrKa Logo" width="256" height="256"/>
 
 ![Tests](https://github.com/marcosomma/orka/actions/workflows/tests.yml/badge.svg)
 [![codecov](https://codecov.io/gh/marcosomma/orka/graph/badge.svg?token=50DUUWVJA9)](https://codecov.io/gh/marcosomma/orka)
@@ -111,6 +111,10 @@ python -m orka.orka_cli ./example.yml "What is the capital of France?" --log-to-
 ```
 
 This will execute the workflow defined in `example.yml` with the input question, logging each reasoning step.
+
+## 📚 Documentation
+
+📘 [View the Documentation](https://marcosomma.github.io/orka/)
 
 ## 🤝 Contributing
 
