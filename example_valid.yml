@@ -1,0 +1,23 @@
+orchestrator:
+  id: fact-checker
+  strategy: sequential
+  queue: orka:fact-core
+  agents:
+    - domain_classifier
+    - is_fact
+
+agents:
+  - id: domain_classifier
+    type: openai-classification
+    prompt: >
+      Classify this question into one of the following domains:
+      - science, geography, history, technology, date check, general
+    options: [science, geography, history, technology, date check, general]
+    queue: orka:domain
+
+  - id: is_fact
+    type: openai-binary
+    prompt: >
+      Is this a {{ input }} factual assertion that can be verified externally? Answer TRUE or FALSE.
+    queue: validation_queue
+    
