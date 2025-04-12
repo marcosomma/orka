@@ -1,3 +1,4 @@
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
 
 # Agent Types in OrKa
 
@@ -122,3 +123,5 @@ Then reference it via `type: custom` and load dynamically via plugin hooks (plan
 ---
 
 Agents are the core cognitive unit of OrKa — build your system by composing them.
+
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)

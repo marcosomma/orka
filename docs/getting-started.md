@@ -1,3 +1,4 @@
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
 
 # Getting Started with OrKa
 
@@ -95,3 +96,5 @@ Edit `orka.yaml` to define:
 ## 🙌 Need Help?
 
 Open an issue on GitHub or join the discussion [here](https://github.com/marcosomma/orka/issues).
+
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
