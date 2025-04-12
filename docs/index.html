@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OrKa — Orchestrator Kit for Agentic Reasoning</title>
   <style>
-    /* 70s surf-style background */
     body {
       font-family: 'Helvetica Neue', sans-serif;
       padding: 2rem;
@@ -21,10 +20,34 @@
           #caf0f8 60px,
           #caf0f8 80px
         ),
-        linear-gradient(to bottom, #03045e, #023e8a);
+        linear-gradient(to bottom, #6683bd, #02688a);
       background-size: 100% 100%;
       min-height: 100vh;
       background-blend-mode: overlay;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      text-align: center;
+    }
+
+    .logo-wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-wrapper:hover {
+      transform: translateY(-3px);
+    }
+
+    .logo {
+      max-width: 96px;
+      filter: drop-shadow(2px 2px 0 #000);
     }
 
     h1 {
@@ -32,6 +55,13 @@
       font-weight: 900;
       letter-spacing: 1px;
       text-shadow: 2px 2px #000;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-shadow: 1px 1px #000;
+      margin: 0.25rem 0;
     }
 
     a {
@@ -39,42 +69,107 @@
       text-decoration: none;
     }
 
+    a:hover {
+      color: #fff8c4;
+    }
+
     .button {
-      background: #ff6f00;
+      background: linear-gradient(135deg, #ff6f00, #ffa000);
       color: white;
       padding: 0.75rem 1.5rem;
       display: inline-block;
       margin-top: 1.5rem;
-      border-radius: 6px;
+      border-radius: 10px;
       text-decoration: none;
-      box-shadow: 2px 2px 0 #000;
       font-weight: bold;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: bounce 2.5s infinite;
     }
 
     .button:hover {
-      background: #ffa000;
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
 
-    .logo {
-      max-width: 128px;
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .features-section {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 3rem auto 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .features-section h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      filter: drop-shadow(2px 2px 0 #000);
+      text-shadow: 1px 1px #000;
     }
 
-    p {
+    .features-section ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .features-section li {
+      margin-bottom: 0.75rem;
       font-size: 1.1rem;
       text-shadow: 1px 1px #000;
+    }
+
+    .credit {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #e0f7fa;
+      text-shadow: 1px 1px #000;
+    }
+
+    .credit a {
+      color: #ffd166;
+      margin: 0 0.25rem;
+    }
+
+    .credit a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <img src="./logo.png" alt="OrKa Logo" class="logo" />
+  <div class="logo-wrapper">
+    <img src="./logo.png" alt="OrKa Logo" class="logo">
+  </div>
+
   <h1>OrKa</h1>
   <p><strong>Orchestrator Kit for Agentic Reasoning</strong></p>
   <p>Composable cognitive pipelines. YAML-defined. Redis-backed. Transparent AI workflows.</p>
 
   <a class="button" href="https://pypi.org/project/orka">Install via PyPI</a>
   <br />
-  <a href="https://github.com/marcosomma/orka">GitHub ↗</a>
+  <a href="https://github.com/marcosomma" style="margin-top: 1rem; display: inline-block;">GitHub ↗</a>
+
+  <div class="features-section">
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Agent-based architecture:</strong> Build modular reasoning systems with pluggable agent types.</li>
+      <li><strong>YAML-defined logic:</strong> Design transparent, composable cognitive workflows without code.</li>
+      <li><strong>Redis streaming memory:</strong> Agent interactions are logged, streamable, and replayable.</li>
+      <li><strong>Traceable cognition:</strong> No black-box calls — every step in the pipeline is inspectable.</li>
+      <li><strong>LLM-native:</strong> Integrate OpenAI, Ollama, and more as agents or tools within pipelines.</li>
+    </ul>
+  </div>
+
+  <div class="credit">
+    Built with ☕️ by 
+    <a href="https://github.com/marcosomma" target="_blank">Marco Somma</a> · 
+    <a href="https://www.linkedin.com/in/marcosomma/" target="_blank">LinkedIn</a>
+  </div>
 </body>
 </html>
