@@ -190,7 +190,7 @@ This will execute the workflow defined in `example.yml` with the input question,
 rm -rf dist/ build/ ./*.egg-info
 python3 -m build
 pip install --upgrade twine
-rm -rf dist/ build/ ./*.egg-info
+twine upload dist/*
 ```
 
 ## 🤝 Contributing
