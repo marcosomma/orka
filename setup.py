@@ -13,36 +13,38 @@
 
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="orka-reasoning",
-    version="0.0.1",
+    version="0.1.0",
+    author="Marco Somma",
+    author_email="marcosomma.work@gmail.com",
+    description="OrKa: Modular orchestration for agent-based cognition",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/marcosomma/orka",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
         "redis",
-        "litellm",
         "pyyaml",
-        "async-timeout"
-        "PyYAML==",
-        "redis==",
+        "litellm",
         "jinja2",
         "google-api-python-client",
         "duckduckgo-search",
-        "dotenv",
-        "openai",
-        "pytest",
-        "coverage",
         "python-dotenv",
-        "pyyaml",
-        "pytest-cov",
+        "openai",
+        "async-timeout",
     ],
-    author="Marco Somma",
-    description="OrKa: Modular orchestration for agent-based cognition",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/marcosomma/orka",
+    extras_require={
+        "dev": ["pytest", "coverage", "pytest-cov"]
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License"
+        "License :: Other/Proprietary License",  # Use this for CC BY-NC
+        "Operating System :: OS Independent"
     ],
+    python_requires=">=3.8",
 )

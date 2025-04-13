@@ -1,28 +1,43 @@
 [project]
 name = "orka-reasoning"
-version = "0.0.1"
+version = "0.1.0"
 description = "Modular agent orchestrator for reasoning pipelines"
-authors = [{ name="Marco Somma", email="your@email.com" }]
+authors = [
+  { name = "Marco Somma", email = "marcosomma.work@gmail.com" }
+]
+readme = "README.md"
+license = { text = "CC BY-NC 4.0" }
+requires-python = ">=3.8"
+
 dependencies = [
-    "python-dotenv",
-    "redis",
-    "pyyaml",
-    "openai",          # if you're using OpenAI
-    "duckduckgo-search", # if you're using DDG search
+  "python-dotenv",
+  "redis",
+  "pyyaml",
+  "openai",
+  "duckduckgo-search",
+  "litellm",
+  "jinja2",
+  "google-api-python-client",
+  "async-timeout"
 ]
+
 classifiers = [
+  "Programming Language :: Python :: 3",
   "License :: Other/Proprietary License",
-  "Programming Language :: Python :: 3"
+  "Operating System :: OS Independent"
 ]
-dynamic = ["readme"]
 
 [project.optional-dependencies]
-dev = ["pytest", "coverage"]
-
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+dev = [
+  "pytest",
+  "coverage",
+  "pytest-cov"
+]
 
 [project.urls]
 "Homepage" = "https://github.com/marcosomma/orka"
 "Repository" = "https://github.com/marcosomma/orka"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
