@@ -32,9 +32,6 @@ Click the thumbnail above to watch a quick video demo of OrKa in action — how 
 - Ensure you have Python and Redis installed on your system.
 - Ensure redis is up and running
 
-***pip under maintainence***
-
-<del>
 
   ### PIP
 
@@ -42,9 +39,58 @@ Click the thumbnail above to watch a quick video demo of OrKa in action — how 
     ```
       pip install orka-reasoning
     ```
+  2. **Build your orkestrator**
+    ```
+  orchestrator:
+    id: fact-checker
+    strategy: sequential
+    queue: orka:fact-core
+    agents:
+      - domain_classifier
+      - is_fact
+      - validate_fact
 
+  agents:
+    - id: domain_classifier
+      type: openai-classification
+      prompt: >
+        Classify this question into one of the following domains:
+        - science, geography, history, technology, date check, general
+      options: [science, geography, history, technology, date check, general]
+      queue: orka:domain
+
+    - id: is_fact
+      type: openai-binary
+      prompt: >
+        Is this a {{ input }} factual assertion that can be verified externally? Answer TRUE or FALSE.
+      queue: orka:is_fact
+
+    - id: validate_fact
+      type: openai-binary
+      prompt: |
+        Given the fact "{{ input }}", and the search results "{{ previous_outputs.duck_search }}"?
+      queue: validation_queue
+    ```
+
+  3. **Test Sctipr**
+    ```
+      import orka.orka_cli
+
+      if __name__ == "__main__":
+      # Path to your YAML orchestration config
+      config_path = "example.yml"
+
+      # Input to be passed to the orchestrator
+      input_text = "What is the capital of France?"
+
+      # Run the orchestrator with logging
+      orka.orka_cli.run_cli_entrypoint(
+          config_path=config_path,
+          input_text=input_text,
+          log_to_file=True
+      )
+    ```
   ### OR 
-</del>
 
 1. **Clone the Repository**:
    ```bash
