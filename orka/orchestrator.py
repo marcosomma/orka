@@ -141,7 +141,9 @@ class Orchestrator:
                 queue = result + queue
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        file_path = f"logs/orka_trace_{timestamp}.json"
-        os.makedirs("logs", exist_ok=True)
-        self.memory.save_to_file(file_path)
+        log_dir = os.getenv("ORKA_LOG_DIR", "logs")
+        file_path = f"orka_trace_{timestamp}.json"
+        os.makedirs(log_dir, exist_ok=True)
+        log_path = os.path.join(log_dir, file_path)
+        self.memory.save_to_file(log_path)
         return outputs
