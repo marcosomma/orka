@@ -185,6 +185,14 @@ This will execute the workflow defined in `example.yml` with the input question,
 
 📘 [View the Documentation](./docs/index.md)
 
+## PIP deploy
+```
+rm -rf dist/ build/ ./*.egg-info
+python3 -m build
+pip install --upgrade twine
+rm -rf dist/ build/ ./*.egg-info
+```
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
