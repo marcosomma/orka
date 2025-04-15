@@ -1,4 +1,4 @@
-# OrKa ***(Patent Pending)*** 
+# OrKa
 
 <div align="center">
 
