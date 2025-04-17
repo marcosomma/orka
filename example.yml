@@ -15,7 +15,7 @@
 
 orchestrator:
   id: fact-checker
-  strategy: sequential
+  strategy: decision-tree
   queue: orka:fact-core
   agents:
     - domain_classifier # < -- 1st agent Classifies the domain "science, geography, history, technology, date check, general"
@@ -53,7 +53,7 @@ agents:
     params:
       decision_key: requires_search
       routing_map:
-        true: ["duck_search"]
+        true: ["duck_search", "need_answer", "router_answer"]
         false: ["validate_fact"]
 
   - id: duck_search
@@ -76,9 +76,16 @@ agents:
         false: ["validate_fact"]
 
   - id: validate_fact
-    type: openai-binary
+    type: openai-answer
     prompt: |
-      Given the fact "{{ input }}", and the search results "{{ previous_outputs.duck_search }}"?
+      Given this quote "{{ input }}". validate if is a fact or a question:
+      - if is a true fact: Explain why"?
+      - if is a false fact: Explain why"?
+      - if is a question: Answer to it"?
+
+      ## is a fact: {{ previous_outputs.is_fact }}
+      ## is NOT a question: {{ previous_outputs.is_fact }}
+      
     queue: validation_queue
 
   - id: build_answer

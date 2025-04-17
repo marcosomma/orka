@@ -101,13 +101,15 @@ class Orchestrator:
         while queue:
             agent_id = queue.pop(0)
             agent = self.agents[agent_id]
+            agent_type = agent.type
+            print(f"[ORKA] Running agent '{agent_id}' of type '{agent_type}'")
 
             payload = {
                 "input": input_data,
                 "previous_outputs": outputs
             }
 
-            if agent_id == "router":
+            if agent_type == "routeragent":
                 decision_key = agent.params.get('decision_key')
                 if decision_key is None:
                     raise ValueError(
@@ -137,8 +139,11 @@ class Orchestrator:
                             })
                 self.memory.log(agent_id, agent.__class__.__name__, { "hystory": payload })
 
-            if isinstance(result, list) and agent_id == "router":
-                queue = result + queue
+            if agent_type == "routeragent":
+                next_agents = result if isinstance(result, list) else [result]
+                queue = next_agents
+                print(f"[ORKA][ROUTER] Injecting agents into queue: {next_agents}")
+                continue
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         log_dir = os.getenv("ORKA_LOG_DIR", "logs")

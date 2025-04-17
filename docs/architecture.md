@@ -59,7 +59,7 @@ OrKa is fully driven by `orka.yaml`, which defines:
 - Agent IDs and types
 - Prompts and behavior
 - Routing logic via `RouterAgent`
-- Execution strategy (sequential, dynamic)
+- Execution strategy (decision-tree, dynamic)
 
 This allows reproducible reasoning pipelines and declarative logic.
 

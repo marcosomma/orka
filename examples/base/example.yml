@@ -15,7 +15,7 @@
 
 orchestrator:
   id: fact-checker
-  strategy: sequential
+  strategy: decision-tree
   queue: orka:fact-core
   agents:
     - domain_classifier # < -- 1st agent Classifies the domain "science, geography, history, technology, date check, general"

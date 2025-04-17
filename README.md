@@ -43,7 +43,7 @@ Click the thumbnail above to watch a quick video demo of OrKa in action — how 
     ```
   orchestrator:
     id: fact-checker
-    strategy: sequential
+    strategy: decision-tree
     queue: orka:fact-core
     agents:
       - domain_classifier
@@ -130,7 +130,7 @@ The YAML file specifies the agents and their interactions. Below is an example c
 ```yaml
 orchestrator:
   id: fact-checker
-  strategy: sequential
+  strategy: decision-tree
   queue: orka:fact-core
   agents:
     - domain_classifier

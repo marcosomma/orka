@@ -23,7 +23,7 @@ def example_yaml(tmp_path):
     yaml_content = '''\
 orchestrator:
   id: fact-checker
-  strategy: sequential
+  strategy: decision-tree
   queue: orka:fact-core
   agents:
     - domain_classifier

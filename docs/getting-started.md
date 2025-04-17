@@ -80,7 +80,7 @@ Make sure your Redis server is running, and `orka.yaml` is properly configured.
 Edit `orka.yaml` to define:
 - Agents
 - Their types and prompts
-- Flow strategy (sequential, conditional)
+- Flow strategy (decision-tree, conditional)
 - Routing logic
 
 ---

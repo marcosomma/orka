@@ -19,6 +19,7 @@ class BaseAgent(abc.ABC):
         self.prompt = prompt
         self.queue = queue
         self.params = kwargs
+        self.type = self.__class__.__name__.lower()  
 
     @abc.abstractmethod
     def run(self, input_data):
