@@ -23,6 +23,7 @@ class DummyAgent:
         self.agent_id = agent_id
         self.prompt = prompt
         self.queue = queue
+        self.type = self.__class__.__name__.lower()
     def run(self, input_data): return f"processed: {input_data}"
 
 def test_orchestrator_flow(monkeypatch, tmp_path):
@@ -34,11 +35,11 @@ orchestrator:
   agents: [a1, a2]
 agents:
   - id: a1
-    type: dummy
+    type: openai-binary
     prompt: test
     queue: q1
   - id: a2
-    type: dummy
+    type: openai-binary
     prompt: test
     queue: q2
 """)
