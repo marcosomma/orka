@@ -11,7 +11,7 @@
 
 OrKa is a lightweight SDK and orchestration runtime for defining cognitive pipelines using YAML files and pluggable AI agents.
 
-It shifts AI orchestration from monolithic prompting or hard-coded chains to a **distributed cognition model**, where each step is handled by a distinct reasoning agent: classifiers, validators, searchers, routers, and more.
+It shifts AI orchestration from monolithic prompting or hard-coded chains to a **distributed cognition model**, where each step is handled by a distinct reasoning agent: classifiers, validators, searchers and more.
 
 Every step is logged, inspectable, and overrideable. OrKa doesn’t hide the process — it **lets you observe cognition as it unfolds**.
 
@@ -35,7 +35,6 @@ Every step is logged, inspectable, and overrideable. OrKa doesn’t hide the pro
 
 ✅ Pluggable agent system  
 ✅ LLM-backed binary/classification/chain-of-thought agents  
-✅ Conditional logic via `RouterAgent`  
 ✅ Google/DuckDuckGo search fallback  
 ✅ Full Redis-based trace logging  
 ✅ Kafka-ready memory layer (planned)  
@@ -66,7 +65,6 @@ python test_run.py
 ````
 
 ## 🛣 Roadmap
-✅ Agent routing via RouterAgent
 
 🔜 Kafka-backed memory agent
 

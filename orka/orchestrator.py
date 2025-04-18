@@ -17,7 +17,7 @@ import json
 from jinja2 import Template
 from datetime import datetime
 from .loader import YAMLLoader
-from .agents import agents, llm_agents, google_duck_agents, router_agent
+from .agents import agents, llm_agents, google_duck_agents
 from .memory_logger import RedisMemoryLogger
 
 AGENT_TYPES = {
@@ -27,8 +27,7 @@ AGENT_TYPES = {
     "openai-classification": llm_agents.OpenAIClassificationAgent,
     "openai-answer": llm_agents.OpenAIAnswerBuilder,
     "google-search": google_duck_agents.GoogleSearchAgent,
-    "duckduckgo": google_duck_agents.DuckDuckGoAgent,
-    "router": router_agent.RouterAgent
+    "duckduckgo": google_duck_agents.DuckDuckGoAgent
 }
 
 
@@ -58,23 +57,15 @@ class Orchestrator:
 
             print(f"[INIT] Instantiating agent {agent_id} of type {agent_type}")
 
-            if agent_type == "router":
-                clean_cfg.pop("prompt", None)
-                clean_cfg.pop("queue", None)
-                params = clean_cfg.pop("params", {})
-                clean_cfg.pop("agent_id", None)  # 💥 Prevent double-passing
-                agent = agent_cls(agent_id=agent_id,
-                                  params=params, **clean_cfg)
-            else:
-                prompt = clean_cfg.pop("prompt")
-                queue = clean_cfg.pop("queue")
-                clean_cfg.pop("agent_id", None)
-                agent = agent_cls(
-                    agent_id=agent_id,
-                    prompt=prompt,
-                    queue=queue,
-                    **clean_cfg
-                )
+            prompt = clean_cfg.pop("prompt")
+            queue = clean_cfg.pop("queue")
+            clean_cfg.pop("agent_id", None)
+            agent = agent_cls(
+                agent_id=agent_id,
+                prompt=prompt,
+                queue=queue,
+                **clean_cfg
+            )
 
             instances[agent_id] = agent
         return instances
@@ -107,18 +98,7 @@ class Orchestrator:
                 "previous_outputs": outputs
             }
 
-            if agent_id == "router":
-                decision_key = agent.params.get('decision_key')
-                if decision_key is None:
-                    raise ValueError(
-                        "Router agent must have 'decision_key' in params.")
-                raw_decision_value = outputs.get(decision_key)
-                normalized = self.normalize_bool(raw_decision_value)
-                normalized_key = "true" if normalized else "false"
-                payload['previous_outputs'][decision_key] = normalized_key
-                result = agent.run(payload)
-                print(f"[ROUTER] Using decision_key='{decision_key}' → '{normalized_key}' → route={result}")
-            elif hasattr(agent, "prompt") and isinstance(agent.prompt, str):
+            if hasattr(agent, "prompt") and isinstance(agent.prompt, str):
                 rendered_prompt = self.render_prompt(agent.prompt, payload)
                 payload["prompt"] = rendered_prompt
                 result = agent.run(payload)
@@ -136,9 +116,6 @@ class Orchestrator:
                                 "input": input_data, "result": result
                             })
                 self.memory.log(agent_id, agent.__class__.__name__, { "hystory": payload })
-
-            if isinstance(result, list) and agent_id == "router":
-                queue = result + queue
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         log_dir = os.getenv("ORKA_LOG_DIR", "logs")

@@ -69,27 +69,7 @@ Factual retrieval, search-enhanced answers, fallback evidence.
 
 > Requires `duckduckgo-search` package or Google API key/CSE ID.
 
----
-
-### 🔀 `router`
-
-Controls flow dynamically by inspecting previous outputs and routing conditionally.
-
-**Use case:**  
-Branching logic, optional agent execution, fallback control.
-
-**Example:**
-
-```yaml
-- id: router
-  type: router
-  decision_key: requires_search
-  routing_map:
-    true: [search, validate_fact]
-    false: [validate_fact]
-```
-
----
+--- 
 
 ## 🛠 Custom Agents
 

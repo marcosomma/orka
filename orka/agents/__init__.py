@@ -15,4 +15,3 @@ from .agents import BinaryAgent, ClassificationAgent
 from .llm_agents import OpenAIBinaryAgent, OpenAIClassificationAgent, OpenAIAnswerBuilder
 from .google_duck_agents import GoogleSearchAgent, DuckDuckGoAgent
 from .agent_base import BaseAgent
-from .router_agent import RouterAgent

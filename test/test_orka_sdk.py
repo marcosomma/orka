@@ -28,11 +28,7 @@ orchestrator:
   agents:
     - domain_classifier
     - is_fact
-    - requires_search
-    - router_search
     - duck_search  
-    - need_answer
-    - router_answer
     - validate_fact
     - build_answer
 
@@ -51,38 +47,10 @@ agents:
       Is this a {{ input }} factual assertion that can be verified externally? Answer TRUE or FALSE.
     queue: orka:is_fact
 
-  - id: requires_search
-    type: openai-binary
-    prompt: >
-      Does this {{ input }} require external search to validate? Answer strictly TRUE or FALSE.
-    queue: orka:need_search
-
-  - id: router_search
-    type: router
-    params:
-      decision_key: requires_search
-      routing_map:
-        true: ["duck_search"]
-        false: ["validate_fact"]
-
   - id: duck_search
     type: duckduckgo
     prompt: Perform web search
     queue: orka:search
-
-  - id: need_answer
-    type: openai-binary
-    prompt: >
-      Is this a {{ input }} is a question that requires an answer?
-    queue: orka:is_fact
-
-  - id: router_answer
-    type: router
-    params:
-      decision_key: need_answer
-      routing_map:
-        true: ["build_answer"]
-        false: ["validate_fact"]
 
   - id: validate_fact
     type: openai-binary

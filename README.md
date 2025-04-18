@@ -17,7 +17,7 @@
 - **Modular Agent Orchestration**: Define and manage agents using intuitive YAML configurations.
 - **Configurable Reasoning Paths**: Utilize Redis streams to set up dynamic reasoning workflows.
 - **Comprehensive Logging**: Record and trace every step of the reasoning process for transparency.
-- **Built-in Integrations**: Support for OpenAI agents, web search functionalities, routers, and validation mechanisms.
+- **Built-in Integrations**: Support for OpenAI agents, web search functionalities, and validation mechanisms.
 - **Command-Line Interface (CLI)**: Execute YAML-defined workflows with ease.
 
 ## 🎥 OrKa Video Overview

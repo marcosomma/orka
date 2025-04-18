@@ -88,7 +88,6 @@ Edit `orka.yaml` to define:
 ## 🧪 Next Steps
 
 - Check out [agents.md](agents.md) for all available agent types.
-- Use `RouterAgent` to add conditional logic.
 - Build your own agent by subclassing `BaseAgent`.
 
 ---
