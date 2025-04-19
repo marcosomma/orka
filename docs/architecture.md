@@ -1,4 +1,4 @@
-[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md) | [OrKaUI](./OrKa_UI_Getting_Started_With_Images.md)
 
 # OrKa Architecture ***(Patent Pending)***
 
@@ -94,4 +94,4 @@ All agent outputs are logged with metadata:
 
 OrKa’s architecture is intentionally minimal, observable, and composable — so you can build LLM-based cognition that doesn’t disappear into a black box.
 
-[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md) | [OrKaUI](./OrKa_UI_Getting_Started_With_Images.md)

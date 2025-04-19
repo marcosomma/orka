@@ -1,4 +1,4 @@
-[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md) | [OrKaUI](./OrKa_UI_Getting_Started_With_Images.md)
 # OrKa – Orchestrator Kit for Agentic Reasoning  ***(Patent Pending)***
 
 **OrKa** is a modular, transparent AI cognition framework for orchestrating agent-based reasoning workflows using LLMs. Designed from the ground up for **traceability**, **modularity**, and **introspective control**, OrKa enables the construction of composable reasoning systems inspired by cognitive science — without sacrificing the power of modern foundation models.
@@ -92,4 +92,4 @@ This project welcomes collaboration with:
 ---
 ***Built** by Marco Somma, multipotentialite, AI engineer, and builder of cognitive tools that think out loud.*
 
-[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md)
+[📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md) | [OrKaUI](./OrKa_UI_Getting_Started_With_Images.md)
