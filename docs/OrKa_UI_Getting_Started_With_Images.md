@@ -1,5 +1,22 @@
 [📘 Getting Start](./getting-started.md) | [🤖 Agent Types](./agents.md) | [🔍 Architecture](./architecture.md) | [🧠 Idea](./index.md) | [OrKaUI](./OrKa_UI_Getting_Started_With_Images.md)
 
+## ✨ Why OrKa UI Exists
+
+Most LLM pipelines today are brittle, black-box, and unscalable. OrKa UI was built to make AI orchestration **modular, explainable, and visual**.
+
+With OrKa, you’re not chaining prompts — you’re building structured cognition with logic, memory, and traceability.
+
+---
+
+## 🔍 Core Concepts
+
+- **Agents** — Modular reasoning units (classification, binary logic, LLM outputs)
+- **Routers** — Cognitive logic gates that determine what to do next
+- **Links** — Define directional execution between agents
+- **YAML** — The resulting config file, executable via OrKa backend
+
+---
+
 # Getting Started with OrKa UI 🚀
 
 OrKa UI is a no-code visual tool that lets you build intelligent agent workflows and export them to YAML with a single click. It's built for developers, tinkerers, and product minds who want to orchestrate AI cognition visually.
