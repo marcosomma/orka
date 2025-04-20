@@ -29,6 +29,31 @@ OrKa UI is a no-code visual tool that lets you build intelligent agent workflows
 OrKa (Orchestrator Kit Agents) allows you to visually compose **modular agents** and **logic nodes** (like routers) to define how cognitive workflows behave. Every agent has a purpose, every connection defines logic.
 
 ---
+## 🧩 Prompt Templates for Agents
+
+When designing agents in OrKa UI, you can use **Jinja-style templates** to inject context dynamically. This enables your agents to reason over previous steps and build context-aware answers.
+
+Here’s an example template used for an **openai-answer** agent:
+
+```jinja
+give a compelling and detailed answer to this question. Expand your knowledge for this answer using the given extra data:
+
+## Question: {{ input }}
+## Extra data : {{ preavious_outputs }}
+```
+
+This lets the agent access:
+- `{{ input }}` — the original user query
+- `{{ preavious_outputs }}` — concatenated results from upstream agents
+
+Templates can be used in any prompt field inside OrKa agents.
+
+Use them to:
+- Build context-aware responses
+- Chain logic coherently
+- Inject knowledge progressively
+
+---
 
 ## ⚙️ How to Use OrKa UI (Step-by-Step)
 
